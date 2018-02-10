@@ -1,0 +1,10 @@
+1 - Agregar una columna de de puntos al calendario tipo integer
+
+2 - Crear Tabla Metas
+    CREATE TABLE `siscov`.`Metas` ( `IdMt` INT NOT NULL AUTO_INCREMENT , `Min` INT NOT NULL , `Max` INT NOT NULL , `Fecha` DATE NOT NULL , `Activo` BOOLEAN NOT NULL , PRIMARY KEY (`IdMt`)) ENGINE = InnoDB;
+    ALTER TABLE `metas` ADD `puntos` INT NOT NULL AFTER `Max`;
+    INSERT INTO `metas` (`IdMt`, `Min`, `Max`, `puntos`, `Fecha`, `Activo`) VALUES (NULL, '320', '399', '85', '2017-04-24', '0'), (NULL, '400', '449', '95', '2017-04-24', '0'), (NULL, '450', '1000', '100', '2017-04-24', '0')
+
+    ALTER TABLE `calendar` ADD `puntos` INT NOT NULL AFTER `title`;
+
+3- 
